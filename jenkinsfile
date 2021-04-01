@@ -6,11 +6,5 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/jenkins-docs/simple-java-maven-app.git']]])
             }
         }
-        
-        stage ('Build'){
-            steps {
-                sh 'mvn package'
-            }
-        }
     }
 }
