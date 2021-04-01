@@ -12,10 +12,5 @@ pipeline {
                 sh 'mvn package'
             }
         }
-        stage ('mail') {
-            steps {
-                mail bcc: '', body: 'hi,awesome', cc: '', from: '', replyTo: '', subject: 'hello build', to: 'diwakar.gahlot@gmail.com'
-            }
-        }
     }
 }
